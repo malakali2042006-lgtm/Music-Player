@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Melody - Music Player</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="music-player">
+      <header class="player-header">
+        <h2><i class="fa-solid fa-headphones"></i> Melody</h2>
+        <span>Music Player</span>
+      </header>
+
+      <main class="player-content">
+        <div class="current-song">
+          <div class="album-cover">
+            <img
+              id="cover"
+              src="./img/imgi_1_16-18-30-283_200x200.png"
+              alt="Album Cover"
+            />
+          </div>
+
+          <div class="song-info">
+            <h2 id="song-title">Background Music</h2>
+            <p id="artist-name">JonasBlakewood</p>
+          </div>
+
+          <div class="progress-container">
+            <div class="time">
+              <span id="current-time">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+
+            <input type="range" id="progress" value="0" min="0" max="100" />
+          </div>
+
+          <div class="controls">
+
+            <button id="shuffle-btn">
+              <i class="fa-solid fa-shuffle"></i>
+            </button>
+
+            <button id="prev-btn">
+              <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+            <button id="play-btn" class="play-btn">
+              <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button id="next-btn">
+              <i class="fa-solid fa-forward-step"></i>
+            </button>
+          </div>
+
+         
+          <div class="volume-container">
+            <i class="fa-solid fa-volume-low"></i>
+
+            <input
+              type="range"
+              id="volume"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.5"
+            />
+
+            <i class="fa-solid fa-volume-high"></i>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <h3>My Playlist</h3>
+
+          <div class="song-list" id="song-list">
+            
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
